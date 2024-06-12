@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Trapecio</title>
+</head>
+<body>
+    <h1>Trapecio</h1>
+    <form id="trapecio-form">
+        <label for="baseMayor">Base Mayor (a):</label>
+        <input type="number" id="baseMayor" required>
+        <br>
+        <label for="baseMenor">Base Menor (b):</label>
+        <input type="number" id="baseMenor" required>
+        <br>
+        <label for="altura">Altura (h):</label>
+        <input type="number" id="altura" required>
+        <br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <p>Área: <span id="resultadoArea"></span></p>
+    <p>Perímetro: <span id="resultadoPerimetro"></span></p>
+
+    <script>
+        function calcular() {
+            const baseMayor = parseFloat(document.getElementById("baseMayor").value);
+            const baseMenor = parseFloat(document.getElementById("baseMenor").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+
+            const area = ((baseMayor + baseMenor) * altura) / 2;
+            const perimetro = baseMayor + baseMenor + 2 * Math.sqrt(Math.pow((baseMayor - baseMenor) / 2, 2) + Math.pow(altura, 2));
+
+            document.getElementById("resultadoArea").textContent = area.toFixed(2);
+            document.getElementById("resultadoPerimetro").textContent = perimetro.toFixed(2);
+        }
+    </script>
+</body>
+</html>
