@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirámide</title>
+</head>
+<body>
+    <h1>Calculadora de Volumen de Pirámide</h1>
+    <form id="pyramid-form">
+        <label for="base-area">Área de la base (cm²):</label>
+        <input type="number" id="base-area" step="0.01" required>
+        <br>
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" step="0.01" required>
+        <br>
+        <button type="button" onclick="calcularVolumen()">Calcular</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calcularVolumen() {
+            const baseArea = parseFloat(document.getElementById('base-area').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const volume = (baseArea * height) / 3;
+            document.getElementById('result').textContent = `El volumen de la pirámide es: ${volume.toFixed(2)} cm³`;
+        }
+    </script>
+</body>
+</html>
