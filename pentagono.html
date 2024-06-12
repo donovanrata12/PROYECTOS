@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área y Perímetro de un Pentágono</title>
+</head>
+<body>
+    <h1>Pentágono</h1>
+
+    <!-- Supongamos que tenemos un pentágono regular con lados de 8 unidades y apotema de 5 unidades -->
+    <p>Lado del pentágono: 8 unidades</p>
+    <p>Apotema: 5 unidades</p>
+
+    <p>Área: <span id="area"></span></p>
+    <p>Perímetro: <span id="perimetro"></span></p>
+
+    <script>
+        // Calculamos el área y el perímetro
+        const lado = 8;
+        const apotema = 5;
+
+        const area = (5 / 2) * lado * apotema;
+        const perimetro = 5 * lado;
+
+        // Mostramos los resultados en la página
+        document.getElementById("area").textContent = area.toFixed(2) + " unidades cuadradas";
+        document.getElementById("perimetro").textContent = perimetro + " unidades";
+    </script>
+</body>
+</html>
