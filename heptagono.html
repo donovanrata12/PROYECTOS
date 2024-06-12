@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área y Perímetro de un Heptágono</title>
+</head>
+<body>
+    <h1>Heptágono</h1>
+    <p>Ingresa la longitud de un lado del heptágono:</p>
+    <input type="number" id="lado" placeholder="Longitud del lado">
+    <button onclick="calcular()">Calcular</button>
+    <p>Resultado:</p>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            const lado = parseFloat(document.getElementById('lado').value);
+            const perimetro = 7 * lado;
+            const apotema = lado / (2 * Math.tan(Math.PI / 7));
+            const area = (7 / 2) * lado * apotema;
+
+            document.getElementById('resultado').innerHTML = `
+                Perímetro: ${perimetro.toFixed(2)}
+                Área: ${area.toFixed(2)}
+            `;
+        }
+    </script>
+</body>
+</html>
