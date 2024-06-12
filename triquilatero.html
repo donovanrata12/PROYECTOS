@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Triángulo Equilátero</title>
+    <script>
+        function calcularArea() {
+            const base = parseFloat(prompt("Introduce la base del triángulo:"));
+            const altura = parseFloat(prompt("Introduce la altura del triángulo:"));
+
+            const area = (base * altura) / 2;
+            alert(`El área del triángulo es: ${area.toFixed(2)}`);
+        }
+
+        function calcularPerimetro() {
+            const lado = parseFloat(prompt("Introduce la longitud de un lado del triángulo:"));
+
+            const perimetro = 3 * lado;
+            alert(`El perímetro del triángulo es: ${perimetro.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Área y Perímetro de un Triángulo Equilátero</h1>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+</body>
+</html>
