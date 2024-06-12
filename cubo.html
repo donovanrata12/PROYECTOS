@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title> Volumen del Cubo</title>
+<script>
+function calcularVolumen() {
+  var lado = document.getElementById('lado').value;
+  var volumen = lado * lado * lado;
+  document.getElementById('volumen').value = volumen;
+}
+</script>
+</head>
+<body>
+
+<h2>Calculadora de Volumen de un Cubo</h2>
+<p>Introduce la longitud del lado del cubo:</p>
+<input type="number" id="lado" placeholder="Longitud del lado">
+<button onclick="calcularVolumen()">Calcular Volumen</button>
+<p>Volumen: <input type="text" id="volumen" readonly> unidades cúbicas</p>
+
+</body>
+</html>
