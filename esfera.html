@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> esfera</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function calcularVolumen() {
+            var radio = parseFloat(document.getElementById("radio").value);
+            if (!isNaN(radio)) {
+                // Calculamos el volumen
+                var volumen = (4 / 3) * Math.PI * Math.pow(radio, 3);
+                document.getElementById("resultado").innerHTML = "El volumen de una esfera con radio " + radio + " es " + volumen.toFixed(2) + " cm³";
+            } else {
+                document.getElementById("resultado").innerHTML = "El valor no es numérico";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular el volumen de una esfera</h1>
+    <article>La fórmula para el cálculo del volumen de una esfera es:</article>
+    <strong>Volumen = (4/3)πr³</strong>
+    <p>Radio (en cm): <input type="text" id="radio" value="20">
+        <input type="button" onclick="calcularVolumen()" value="Calcular"></p>
+    <div id="resultado"></div>
+</body>
+</html>
