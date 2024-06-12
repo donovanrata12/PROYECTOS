@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área y Perímetro del Rectángulo</title>
+</head>
+<body>
+    <h1>Rectángulo</h1>
+    <form id="rectangle-form">
+        <label for="length">Longitud (cm):</label>
+        <input type="number" id="length" step="0.01" required>
+        <br>
+        <label for="width">Ancho (cm):</label>
+        <input type="number" id="width" step="0.01" required>
+        <br>
+        <button type="button" onclick="calcularAreaYPerimetro()">Calcular</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calcularAreaYPerimetro() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            const area = length * width;
+            const perimeter = 2 * (length + width);
+            document.getElementById('result').textContent = `Área: ${area.toFixed(2)} cm², Perímetro: ${perimeter.toFixed(2)} cm`;
+        }
+    </script>
+</body>
+</html>
