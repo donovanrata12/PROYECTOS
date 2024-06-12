@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Círculo</title>
+</head>
+<body>
+    <h1>Área y Perímetro del Círculo</h1>
+
+    <script>
+        // Datos del círculo (puedes cambiar estos valores)
+        const radio = 6; // Longitud del radio
+
+        // Cálculo del perímetro
+        const perimetro = 2 * Math.PI * radio;
+
+        // Cálculo del área
+        const area = Math.PI * Math.pow(radio, 2);
+
+        // Mostrar resultados
+        document.write(`<p>Perímetro: ${perimetro.toFixed(2)} cm</p>`);
+        document.write(`<p>Área: ${area.toFixed(2)} cm<sup>2</sup></p>`);
+    </script>
+</body>
+</html>
