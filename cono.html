@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Cono</title>
+</head>
+<body>
+    <h1>Calculadora de Volumen de Cono</h1>
+    <p>Ingresa el radio (r) y la altura (h) del cono:</p>
+    <input type="number" id="radio" placeholder="Radio">
+    <input type="number" id="altura" placeholder="Altura">
+    <button onclick="calcularVolumen()">Calcular Volumen</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularVolumen() {
+            const radio = parseFloat(document.getElementById("radio").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+
+            if (!isNaN(radio) && !isNaN(altura)) {
+                const volumen = (Math.PI * radio * radio * altura) / 3;
+                document.getElementById("resultado").textContent = `El volumen del cono es: ${volumen.toFixed(2)}`;
+            } else {
+                document.getElementById("resultado").textContent = "Ingresa valores válidos para el radio y la altura.";
+            }
+        }
+    </script>
+</body>
+</html>
