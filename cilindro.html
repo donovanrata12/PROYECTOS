@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumen de un Cilindro</title>
+</head>
+<body>
+    <h1>Cilindro</h1>
+
+    <!-- Supongamos que tenemos un cilindro con radio 5 unidades y altura 10 unidades -->
+    <p>Radio: 5 unidades</p>
+    <p>Altura: 10 unidades</p>
+
+    <p>Volumen: <span id="volumen"></span></p>
+
+    <script>
+        // Calculamos el volumen
+        const radio = 5;
+        const altura = 10;
+        const volumen = Math.PI * Math.pow(radio, 2) * altura;
+
+        // Mostramos el resultado en la página
+        document.getElementById("volumen").textContent = volumen.toFixed(2) + " unidades cúbicas";
+    </script>
+</body>
+</html>
