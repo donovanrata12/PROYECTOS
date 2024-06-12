@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decágono</title>
+</head>
+<body>
+    <h1>Decágono Regular</h1>
+    <p>Decágono con lado de 6 cm:</p>
+
+    <script>
+        // Datos del decágono
+        const lado = 6;
+        const apotema = lado / (2 * Math.tan(Math.PI / 10)); // Fórmula de la apotema
+
+        // Cálculo del área
+        const area = 5 * lado * apotema;
+
+        // Cálculo del perímetro
+        const perimetro = 10 * lado;
+
+        // Mostrar resultados
+        document.write(`<p>Área: ${area.toFixed(2)} cm²</p>`);
+        document.write(`<p>Perímetro: ${perimetro} cm</p>`);
+    </script>
+</body>
+</html>
