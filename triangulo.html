@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área y Perímetro del Triángulo</title>
+</head>
+<body>
+    <h1>Triángulo</h1>
+    <form id="trianguloForm">
+        <label for="base">Base:</label>
+        <input type="number" id="base" placeholder="Ingrese la base" required>
+        <br>
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" placeholder="Ingrese la altura" required>
+        <br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <p>Área: <span id="resultadoArea"></span></p>
+    <p>Perímetro: <span id="resultadoPerimetro"></span></p>
+
+    <script>
+        function calcular() {
+            const base = parseFloat(document.getElementById('base').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+
+            const area = (base * altura) / 2;
+            const perimetro = base * 3; // Para un triángulo equilátero
+
+            document.getElementById('resultadoArea').textContent = area.toFixed(2);
+            document.getElementById('resultadoPerimetro').textContent = perimetro.toFixed(2);
+        }
+    </script>
+</body>
+</html>
