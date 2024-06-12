@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rombo</title>
+</head>
+<body>
+    <h1>Área y Perímetro del Rombo</h1>
+    <p>Ingresa la longitud de un lado del rombo:</p>
+    <input type="number" id="lado" placeholder="Longitud del lado">
+    <button onclick="calcular()">Calcular</button>
+    <p>Perímetro: <span id="perimetro"></span></p>
+    <p>Área: <span id="area"></span></p>
+
+    <script>
+        function calcular() {
+            const lado = parseFloat(document.getElementById("lado").value);
+            const perimetro = 4 * lado;
+            const area = (lado ** 2) / 2;
+
+            document.getElementById("perimetro").textContent = perimetro.toFixed(2);
+            document.getElementById("area").textContent = area.toFixed(2);
+        }
+    </script>
+</body>
+</html>
