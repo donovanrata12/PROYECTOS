@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Palíndromos</title>
+</head>
+<body>
+
+<p>Ingresa una palabra o frase</p>
+<input id="texto" type="text">
+
+<button onclick="verificarPalindromo()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function verificarPalindromo() {
+  let texto = document.getElementById("texto").value;
+  let limpio = texto.replace(/\s+/g, '').toLowerCase();
+  let invertido = limpio.split('').reverse().join('');
+
+  if (limpio === invertido) {
+    document.getElementById("resultado").innerHTML = "La palabra o frase '" + texto + "' es un palíndromo.";
+  } else {
+    document.getElementById("resultado").innerHTML = "La palabra o frase '" + texto + "' no es un palíndromo.";
+  }
+}
+</script>
+
+</body>
+</html>
+
