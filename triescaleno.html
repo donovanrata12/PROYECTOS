@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Triángulo Escaleno</title>
+    <script>
+        function calcularArea() {
+            const ladoA = parseFloat(prompt("Introduce la longitud del primer lado:"));
+            const ladoB = parseFloat(prompt("Introduce la longitud del segundo lado:"));
+            const ladoC = parseFloat(prompt("Introduce la longitud del tercer lado:"));
+
+            const s = (ladoA + ladoB + ladoC) / 2;
+            const area = Math.sqrt(s * (s - ladoA) * (s - ladoB) * (s - ladoC));
+            alert(`El área del triángulo es: ${area.toFixed(2)}`);
+        }
+
+        function calcularPerimetro() {
+            const ladoA = parseFloat(prompt("Introduce la longitud del primer lado:"));
+            const ladoB = parseFloat(prompt("Introduce la longitud del segundo lado:"));
+            const ladoC = parseFloat(prompt("Introduce la longitud del tercer lado:"));
+
+            const perimetro = ladoA + ladoB + ladoC;
+            alert(`El perímetro del triángulo es: ${perimetro.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Área y Perímetro de un Triángulo Escaleno</h1>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+</body>
+</html>
