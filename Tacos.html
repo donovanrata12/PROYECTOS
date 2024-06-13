@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos</title>
+</head>
+<body>
+
+    <h1>Tacos consumidos en la Cdmx</h1>
+
+    <p>Numero de Gente consumidora de Tacos en CDMX</p>
+    <input id="gente" type="number">
+    
+    <button onclick="calcularTacos()">Calcular</button>
+    
+    <p id="resultado"></p>
+    
+    <script>
+
+    function calcularTacos() {
+      let gente = document.getElementById("gente").value;
+      let tacos = 4 * gente;
+      if (gente === "" || tacos === "") {
+        document.getElementById("resultado").innerHTML = "Ingresa la cantidad de personas que consumen tacos en la Ciudad de Mexico";
+      } else {
+      document.getElementById("resultado").innerHTML = "El numero de tacos consumidos en mexico es:  " + tacos;
+      }
+    }
+    </script>
+    
+
+
+</body>
+</html>
