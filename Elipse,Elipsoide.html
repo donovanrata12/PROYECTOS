@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elipse(Ovalo) y Elipsoide</title>
+</head>
+<body>
+
+    <h1>Perímetro de una elipse</h1>
+
+<p>Semieje mayor</p>
+<input id="semiejeMayor" type="number">
+
+<p>Semieje menor</p>
+<input id="semiejeMenor" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  let semiejeMayor = document.getElementById("semiejeMayor").value;
+  let semiejeMenor = document.getElementById("semiejeMenor").value;
+  let perimetro = Math.PI * (3*(parseFloat(semiejeMayor) + parseFloat(semiejeMenor)) - Math.sqrt((3*parseFloat(semiejeMayor) + parseFloat(semiejeMenor))*(parseFloat(semiejeMayor) + 3*parseFloat(semiejeMenor))));
+  document.getElementById("resultado").innerHTML = "El perímetro de la elipse es: " + perimetro;
+}
+</script>
+
+<h1>Area de una elipse</h1>
+
+<p>Semieje mayor</p>
+<input id="semi_Eje_Mayor" type="number">
+
+<p>Semieje menor</p>
+<input id="semi_Eje_Menor" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  var semi_eje_Mayor = document.getElementById("semi_Eje_Mayor").value;
+  var semi_eje_Menor = document.getElementById("semi_Eje_Menor").value;
+  var area = Math.PI * semi_eje_Mayor * semi_eje_Menor;
+  document.getElementById("respuesta").innerHTML = "El área de la elipse es: " + area;
+}
+</script>
+
+<h1>Volumen de un Elipsoide</h1>
+
+<p>Semieje a</p>
+<input id="semiejeA" type="number">
+
+<p>Semieje b</p>
+<input id="semiejeB" type="number">
+
+<p>Semieje c</p>
+<input id="semiejeC" type="number">
+
+<button onclick="calcularVolumen()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumen() {
+  let semiejeA = document.getElementById("semiejeA").value;
+  let semiejeB = document.getElementById("semiejeB").value;
+  let semiejeC = document.getElementById("semiejeC").value;
+  let volumen = (4/3) * Math.PI * semiejeA * semiejeB * semiejeC;
+  document.getElementById("total").innerHTML = "El volumen del elipsoide es: " + volumen;
+}
+</script>
+    
+</body>
+</html>

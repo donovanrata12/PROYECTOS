@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodecagono y Prisma Dodecagonal</title>
+</head>
+<body>
+    
+    <h1>Perímetro de un Dodecágono</h1>
+
+<p>Longitud del lado:</p>
+<input id="lado" type="number">
+
+<button onclick="calcularPerimetro()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularPerimetro() {
+  var lado = document.getElementById("lado").value;
+  var perimetro = 12 * lado;
+  document.getElementById("resultado").innerHTML = "El perímetro del dodecágono es: " + perimetro;
+}
+</script>
+
+<h1>Area de un Dodecágono</h1>
+
+<p>Longitud del lado:</p>
+<input id="cateto" type="number">
+
+<button onclick="calcularArea()">Calcular</button>
+
+<p id="respuesta"></p>
+
+<script>
+function calcularArea() {
+  let lado = document.getElementById("cateto").value;
+  let area = (12/4) * lado * lado * Math.tan(Math.PI/12);
+  document.getElementById("respuesta").innerHTML = "El área del dodecágono es: " + area;
+}
+</script>
+
+<h1>Volumen de un prisma dodecagonal</h1>
+
+<p>Longitud del lado:</p>
+<input id="adyacente" type="number">
+
+<p>Altura del prisma:</p>
+<input id="altura" type="number">
+
+<button onclick="calcularVolumen()">Calcular</button>
+
+<p id="total"></p>
+
+<script>
+function calcularVolumen() {
+  let lado = document.getElementById("adyacente").value;
+  let altura = document.getElementById("altura").value;
+  let areaBase = (12/4) * lado * lado * Math.tan(Math.PI/12);
+  let volumen = areaBase * altura;
+  document.getElementById("total").innerHTML = "El volumen del prisma dodecagonal es: " + volumen;
+}
+</script>
+
+</body>
+</html>
