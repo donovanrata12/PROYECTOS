@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Aritméticas</title>
+</head>
+<body>
+
+<input id="numero1" type="number" placeholder="Ingresa el primer número">
+<input id="numero2" type="number" placeholder="Ingresa el segundo número">
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="suma"></p>
+<p id="resta"></p>
+<p id="multiplicacion"></p>
+<p id="division"></p>
+
+<script>
+function calcular() {
+  let numero1 = parseFloat(document.getElementById("numero1").value);
+  let numero2 = parseFloat(document.getElementById("numero2").value);
+
+  let suma = numero1 + numero2;
+  let resta = numero1 - numero2;
+  let multiplicacion = numero1 * numero2;
+  let division = numero1 / numero2;
+
+  document.getElementById("suma").innerHTML = "Suma: " + suma;
+  document.getElementById("resta").innerHTML = "Resta: " + resta;
+  document.getElementById("multiplicacion").innerHTML = "Multiplicación: " + multiplicacion;
+  document.getElementById("division").innerHTML = "División: " + division;
+}
+</script>
+
+</body>
+</html>
