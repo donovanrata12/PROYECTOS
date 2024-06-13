@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumen de Prisma Rectangular</title>
+</head>
+<body>
+    <h1>Calculadora de Volumen de Prisma Rectangular</h1>
+    <label for="base">Longitud de la base (rectángulo):</label>
+    <input type="number" id="base">
+    <br>
+    <label for="ancho">Ancho de la base (rectángulo):</label>
+    <input type="number" id="ancho">
+    <br>
+    <label for="altura">Altura del prisma:</label>
+    <input type="number" id="altura">
+    <br>
+    <button onclick="calcularVolumen()">Calcular Volumen</button>
+    <p id="resultado"></p>
+    <script>
+        function calcularVolumen() {
+            const base = parseFloat(document.getElementById('base').value);
+            const ancho = parseFloat(document.getElementById('ancho').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            const areaBase = base * ancho;
+            const volumen = areaBase * altura;
+            document.getElementById('resultado').textContent = `El volumen es: ${volumen.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
